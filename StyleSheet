@@ -1,0 +1,576 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* height: 4000px; */
+    overflow-wrap:break-word;
+}
+
+.seader{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* height: 657px; */
+}
+
+.nav{
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+}
+
+.nav_list{
+    float: left;
+}
+
+.nav_list_a{
+    text-decoration: none;
+    padding: 10px 16px;
+    font: bolder 15px sans-serif;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    transition: 0.5s linear;
+}
+
+.nav_list_a:hover{
+    color: rgb(255, 18, 93);
+}
+
+ul li:last-of-type{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.user_icon{
+    padding: 5px;
+}
+
+.welcome{
+    text-align: center;
+    margin-top: 14%;
+    color:rgb(240, 240, 227);
+}
+
+#welc_h1{
+    font: bolder 110px Lucida Console;
+}
+
+#welc_p1{
+    margin-top: 7%;
+    font-size: 18px;
+}
+
+#get_started{
+    border:2px solid white;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 6px;
+    cursor: pointer;
+    font: 19px Apple Chancery, cursive;
+    margin-top: 5%;
+    transition: 0.5s linear;
+}
+
+#get_started:hover{
+    border-color: rgb(255, 18, 93);
+    color: rgb(255, 18, 93);
+}
+
+div > hr{
+    width: 240px;
+    margin: auto;
+}
+
+.seader::before{
+    background: url(https://orangency.com/wp-content/uploads/2021/03/web-programming.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.95;
+    content: "";
+}
+
+.margin_top{
+    margin-top: 16%;
+}
+
+
+.main1{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 16%; */
+    background-color: rgb(30, 30, 27);
+    margin-left: 2.4%;
+    margin-right: 2.4%;
+    border-radius: 2.5%;
+}
+
+.main1_flex{
+    margin: auto 3.6%;
+}
+
+.slide1, .slide3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5%;
+}
+
+.slide2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 2.5%;
+}
+
+.slide1 p, .slide2 p, .slide3 p{
+    align-self: center;
+    font: bold 33px Rockwell;
+    line-height: 175%;
+    opacity: 0;
+    color: white;
+}
+
+@keyframes image{
+    0% {opacity: 0;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.5;}
+    75% {opacity: 0.75;}
+    100% {opacity: 1;}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .images {
+      animation: image 3s linear -1s 1 forwards;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .imagesd {
+      animation: image 3.5s linear 0.25s 1 forwards;
+    }
+}
+
+.img1{
+    width: 400px;
+    height: 250px;
+    /* background: url(https://4kwallpapers.com/images/wallpapers/eat-sleep-code-repeat-black-background-programmer-quotes-3840x2160-5947.png) no-repeat center center/cover; */
+}
+
+.img2{
+    width: 400px;
+    height: 250px;
+    /* background: url(https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg?cs=srgb&dl=pexels-cottonbro-5483071.jpg&fm=jpg) no-repeat center center/cover; */
+}
+
+.img3{
+    width: 400px;
+    height: 250px;
+    /* background: url(https://nighteye.app/wp-content/uploads/2020/04/why-programmers-work-with-dark-mode.png) no-repeat center center/cover; */
+}
+
+.img1, .img2, .img3{
+    /* border-radius: 12px; */
+    opacity: 0;
+    outline: auto;
+}
+
+
+
+.main2{
+    /* margin-top: 12%; */
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, black, rgb(71, 71, 71));
+    color: white;
+}
+
+.main2 h2{
+    font: bold 55px Candara;
+    text-align: center;
+}
+
+.shows{
+    height: 200px;
+    width: 320px;
+    padding: 1%;
+}
+
+.show1{
+    background: url(https://repository-images.githubusercontent.com/276876148/8df97f00-c21d-11ea-97e0-bdeb0ed3683d) no-repeat center center/cover;
+}
+
+.show2{
+    background: url(https://cdn-developer-wp.arc.dev/wp-content/uploads/2021/08/Adham-Dannaway-home.jpg) no-repeat center center/cover;
+}
+
+.show3{
+    background: url(https://www.sliderrevolution.com/wp-content/uploads/2020/08/seb-kay.jpg) no-repeat center center/cover;
+}
+
+.show4{
+    background: url(https://d85wutc1n854v.cloudfront.net/live/products/600x375/WB009H076.png?v=2.0) no-repeat center center/cover;
+}
+
+.show5{
+    background: url(https://uploads.sitepoint.com/wp-content/uploads/2019/04/155530807632.jpg) no-repeat center center/cover;
+}
+
+.show6{
+    background: url(https://designmodo.com/wp-content/uploads/2017/10/04-drew-rawitz-portfolio-projects.jpg) no-repeat center center/cover;
+}
+
+.row1, .row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.row1{
+    margin-top: 2%;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    outline: auto;
+    border-radius: 12px;
+    padding: 1%;
+    margin: 1.5%;
+    padding-bottom: 0;
+    cursor: pointer;
+    transition: 1.1s ease-out;
+}
+
+.main2 h4{
+    font: lighter 24px Lucida Console;
+    line-height: 150%;
+    padding: 1.5%;
+}
+
+.projects:hover{
+    transform: scale(1.1);
+    background-color: white;
+    /* outline-color: rgb(255, 18, 93); */
+    color: black;
+}
+
+.main2_btn{
+    margin: 3% auto;
+    color: rgb(255, 255, 255);
+    font: 19px Apple Chancery, cursive;
+    border-color: white;
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.4s linear;
+}
+
+.main2_btn:hover{
+    /* background-color:  rgb(255, 18, 93); */
+    /* background-color: rgb(24, 44, 37); */
+    color: rgb(255, 18, 93);
+    border-color: rgb(255, 18, 93);
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+    .images_main2_text {
+      animation: image 3.0s linear 0.25s 1 forwards;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .images_main2_projects {
+      animation: image 3.5s linear 0.25s 1 forwards;
+    }
+} */
+
+
+
+.main3{
+    /* margin-top: 12%;  */
+    background: url(https://img.freepik.com/free-vector/abstract-black-shapes-background-design_1017-31904.jpg?w=900&t=st=1660554966~exp=1660555566~hmac=c02aa0382bc7ea23bb34bb9b619e34bd2ecb608a9eb8985fb67408715d74b8e9) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.main3 h2{
+    font: bold 55px Candara;
+    text-align: center;
+    color: white;
+}
+
+.review_box{
+    display: flex;
+    flex-direction: row;
+    margin: 6% 3%;
+}
+
+.remarks{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.remarks h3{
+    /* align-self: center; */
+    font: bold 63px sans-serif;
+    line-height: 120%;
+    color: white;
+    /* font-size: 20vw; */
+}
+
+.remarks hr{
+    width: 95%;
+}
+
+.remarks p{
+    font: lighter 40px sans-serif;
+    /* line-height: 0%; */
+    color: white;
+}
+
+.edit1{    
+    color: rgb(255, 18, 93);
+}
+
+.edit2{
+    text-decoration: none;
+    color: white;
+}
+
+.edit2:hover{
+    text-decoration: underline;
+}
+
+.review_box img{
+    border-radius: 100%;
+}
+
+.review_para{
+    font-family: Rockwell;
+    font-size: 1.92vw;
+    color: white;
+    margin-top: 2%;
+    /* padding: 1%; */
+    /* font-size: 5vmin; */
+}
+
+.review_box cite{
+    color: white;
+    margin-top: auto;
+    align-self: flex-end;
+    font-size: 1.35vw;
+}
+
+
+.slideshow{
+    position: relative;
+    max-width: 800px;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2%;
+    outline: auto;
+    /* flex: 0 1 600px; */
+}
+
+.slide{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    max-width: 800px;
+    height: 400px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.slide img{
+    align-self: flex-start;
+}
+
+.btn{
+    /* position: absolute;
+    top:50%; */
+    border: none;
+    border-radius: 100%;
+    height: 40px;
+    width: 107px;    
+    font-size: 60px; 
+    align-self: center;
+    background-color: transparent;
+    transition: 0.4s linear;
+    color: white;
+}
+
+.btn:hover{
+    color: rgb(255, 18, 93);
+    transform: scale(1.2);
+}
+
+.btn-next{
+    right:-5%;
+}
+
+.btn-prev{
+    left:-5%;
+}
+
+
+
+.main4{
+    /* margin-top: 12%;  */
+    display: flex;
+    flex-direction: column;
+}
+
+.main4 h2{
+    font: bold 55px Candara;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.clients img{
+    margin: 2%;
+    border-radius: 100%;
+}
+
+
+
+footer{
+    font: 15.7px sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer_box{
+    /* height: 657px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    margin: 5% 2%;
+    justify-content: space-between;
+}
+
+.column b{
+    color: rgba(155, 155, 155, 0.8);
+    font-size: 16.6px;
+}
+
+.about_me{
+    max-width: 440px;
+}
+
+.about_me b{
+    padding-left: 2.3em;
+}
+
+.about_me img{
+    border-radius: 100%;
+}
+
+.brands a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.brands a, .fb, .ig, .tw{
+    margin: 0% 1%;
+}
+
+.fb, .ig, .tw{
+    font-size: 21.5px;    
+    transition: 0.4s linear;
+}
+
+.fb:hover{
+    color: rgb(60, 0, 255);
+}
+
+.ig:hover{
+    color: rgb(255, 0, 119);
+}
+.tw:hover{
+    color: rgb(0, 128, 255);
+}
+
+.contact li{
+    list-style-type: none;
+    line-height: 2.6em;
+}
+
+.footer_box hr{
+    width:99.8%;
+    opacity: 0.8;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: space-between;
+    border-top: 1px solid rgba(150,144,162,.15);
+}
+
+.copy{
+    /* float: left; */
+    /* justify-content: flex-start; */
+    text-align: left;
+    padding-left: 1.2em;
+}
+
+.privacy{
+    /* float: right; */
+    /* justify-content: flex-end; */
+    text-align: right;
+    padding-right: 1.2em;
+}
+
+.copy, .privacy{
+    align-self: center;
+}
+
+.privacy a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.privacy a:hover{
+    text-decoration: underline;
+}
