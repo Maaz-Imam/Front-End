@@ -1,0 +1,156 @@
+function image_animation(obs,add)
+{
+  const observer = new IntersectionObserver(entries => 
+  {
+    entries.forEach(entry => 
+    {
+      if (entry.isIntersecting) 
+      {
+        entry.target.classList.add(add);
+      }
+    });
+  });
+
+  observer.observe(document.querySelector(obs));
+}
+
+let row2 = document.getElementById('row2');
+row2.style.display = "none";
+
+function togglehide()
+{
+    let btn = document.getElementById('projbtn');
+    if(row2.style.display!='none')
+    {
+        row2.style.display = 'none';
+        btn.innerText = "Load More";
+    }
+    else
+    {
+        row2.style.display = 'flex';
+        btn.innerText = "Hide";
+    }
+}
+
+image_animation(".img1",'images');
+image_animation(".slide1 p",'imagesd');
+image_animation(".img2",'images');
+image_animation(".slide2 p",'imagesd');
+image_animation(".img3",'images');
+image_animation(".slide3 p",'imagesd');
+
+
+
+
+const slides = document.querySelectorAll(".slide");
+
+slides.forEach((slide, indx) => 
+{
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+const nextSlide = document.querySelector(".btn-next");
+
+let curSlide = 0;
+let maxSlide = slides.length - 1;
+
+nextSlide.addEventListener("click", function () 
+{
+  if (curSlide === maxSlide) 
+  {
+    curSlide = 0;
+  } 
+  else 
+  {
+    curSlide++;
+  }
+
+  slides.forEach((slide, indx) => 
+  {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+
+const prevSlide = document.querySelector(".btn-prev");
+prevSlide.addEventListener("click", function () 
+{
+  if (curSlide === 0) 
+  {
+    curSlide = maxSlide;
+  } 
+  else 
+  {
+    curSlide--;
+  }
+
+  slides.forEach((slide, indx) => 
+  {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+// let Revimg = document.getElementById('rev_img');
+// let Revpara = document.getElementById('rev_para');
+// let Revcite = document.getElementById('rev_cite');
+
+// function slider()
+// {
+//     let slide = document.getElementById('rev_span');
+//     // Add the animation class
+//     slide.target.classList.add('.slidery');   
+// }
+
+// function next()
+// {
+//     let Revcntr = document.getElementById('rev_counter');
+
+//     if(Revcntr.innerText == "1/3")
+//     {
+//         Revcntr.innerText = "2/3";
+//         Revpara.innerText  ="It was an absolute pleasure working with Digitaro- they were highly professional and delivered everything on time! A quality that comes in rare these days. Apart from that, they were extremely kind and supportive to all our needs/requirements. Would highly recommend!!👏💯";
+//         Revimg.src = "https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg";
+//         Revcite.innerText = "- Richard Bloom, Founder mcsdigitizing.com";
+//     }
+//     else if(Revcntr.innerText == "2/3")
+//     {
+//         Revcntr.innerText = "3/3";
+//         Revpara.innerText  ="Can't beleive the amount of effort they put into the work really wworkede joining hands with them. Will surely recommend to others and do work with them again in the future!";
+//         Revimg.src = "https://www.masslive.com/resizer/kNl3qvErgJ3B0Cu-WSBWFYc1B8Q=/arc-anglerfish-arc2-prod-advancelocal/public/W5HI6Y4DINDTNP76R6CLA5IWRU.jpeg";
+//         Revcite.innerText = "- Samantha Rogers, CEO SamInc.com";
+//     }
+//     else if(Revcntr.innerText == "3/3")
+//     {
+//         Revcntr.innerText = "1/3";
+//         Revpara.innerText  ="I've had a great experience working with them. They've shown initiative, explained the technical terms to me in basic layman terms and understand and execute exactly what I wanted for my website. I would highly recommend them!";
+//         Revimg.src = "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F09%2Fdwayne-the-rock-johnson-jabroni-catchphrase-added-to-dictionary-com-000.jpg?w=960&cbr=1&q=90&fit=max";
+//         Revcite.innerText = "- Dwayen JOshneons, Executive Academia.com";
+//     }
+// }
+
+// function prev()
+// {
+//     let Revcntr = document.getElementById('rev_counter');
+
+//     if(Revcntr.innerText == "3/3")
+//     {
+//         Revcntr.innerText = "2/3";
+//         Revpara.innerText  ="It was an absolute pleasure working with Digitaro- they were highly professional and delivered everything on time! A quality that comes in rare these days. Apart from that, they were extremely kind and supportive to all our needs/requirements. Would highly recommend!!👏💯";
+//         Revimg.src = "https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg";
+//         Revcite.innerText = "- Richard Bloom, Founder mcsdigitizing.com";
+//     }
+//     else if(Revcntr.innerText == "2/3")
+//     {
+//         Revcntr.innerText = "1/3";
+//         Revpara.innerText  ="I've had a great experience working with them. They've shown initiative, explained the technical terms to me in basic layman terms and understand and execute exactly what I wanted for my website. I would highly recommend them!";
+//         Revimg.src = "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F09%2Fdwayne-the-rock-johnson-jabroni-catchphrase-added-to-dictionary-com-000.jpg?w=960&cbr=1&q=90&fit=max";
+//         Revcite.innerText = "- Dwayen JOshneons, Executive Academia.com";
+//     }
+//     else if(Revcntr.innerText == "1/3")
+//     {
+//         Revcntr.innerText = "3/3";
+//         Revpara.innerText  ="Can't beleive the amount of effort they put into the work really wworkede joining hands with them. Will surely recommend to others and do work with them again in the future!";
+//         Revimg.src = "https://www.masslive.com/resizer/kNl3qvErgJ3B0Cu-WSBWFYc1B8Q=/arc-anglerfish-arc2-prod-advancelocal/public/W5HI6Y4DINDTNP76R6CLA5IWRU.jpeg";
+//         Revcite.innerText = "- Samantha Rogers, CEO SamInc.com";
+//     }
+// }
